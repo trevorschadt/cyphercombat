@@ -267,7 +267,7 @@ export class CypherCombatSidebar {
 
         // Set a property for whether or not this is editable. This controls whether editabel fields like HP will be shown as an input or a div in the combat tracker HTML template.
         combatant.isGM = game.user.isGM;
-        combatant.isObserver = (combatant.actor.permission == CONST.DOCUMENT_PERMISSION_LEVELS.OBSERVER) ? true : false;
+        combatant.isObserver = (combatant.actor.permission == CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER) ? true : false;
 
         // Determine if combatant is active
         combatant.active = (game.combat.started && combatant.tokenId == game.combat.combatant.tokenId) ? true : false;
